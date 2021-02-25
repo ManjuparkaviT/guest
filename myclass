@@ -1,0 +1,95 @@
+import java.util.*;
+import java.io.*;
+
+class ResortGuest
+{
+    private int guestId;
+    private String guestName;
+    private String dateOfBooking;
+    private int noOfRoomsBooked;
+    private String mealOption;
+    private double totalBill;
+
+    public int getGuestId(){
+        return guestId;
+    }
+
+    public void setGuestId(int Id){
+        this.guestId=Id;
+    }
+
+    public String getGuestName(){
+        return guestName;
+    }
+
+    public void setGuestName(String name){
+        this.guestName=name;
+    }
+
+    public String getDateOfBooking(){
+        return dateOfBooking;
+    }
+
+    public void setDateOfBooking(String date){
+        this.dateOfBooking=date;
+    }
+
+    public int getNoOfRoomsBooked(){
+        return noOfRoomsBooked;
+    }
+
+    public void setNoOfRoomsBooked(int room){
+        this.noOfRoomsBooked=room;
+    }
+
+    public String getMealOption(){
+        return mealOption;
+    }
+
+    public void setMealOption(String meal){
+        this.mealOption=meal;
+    }
+     
+    public double getTotalBill(){
+        return totalBill;
+    }
+
+    public void setTotalBill(double bill){
+        this.totalBill=bill;
+    }
+
+    
+}
+
+public class myClass{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        
+        ArrayList l=new ArrayList();
+        for(int i=0;i<4;i++){
+            ArrayList al=new ArrayList();
+            ResortGuest guest=new ResortGuest();
+            guest.setGuestId(sc.nextInt());
+            guest.setGuestName(sc.next());
+            guest.setDateOfBooking(sc.next());
+            guest.setNoOfRoomsBooked(sc.nextInt());
+            guest.setMealOption(sc.next());
+            guest.setTotalBill(sc.nextDouble());
+
+            al.add(guest.getGuestId());
+            al.add(guest.getGuestName());
+            al.add(guest.getDateOfBooking());
+            al.add(guest.getNoOfRoomsBooked());
+            al.add(guest.getMealOption());
+            al.add(guest.getTotalBill());
+
+            l.add(al);
+
+
+        }
+        
+        System.out.print(l);
+
+    }
+}
+
